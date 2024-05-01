@@ -7,12 +7,14 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         var WebApp = window.Telegram.WebApp;
+        var username = WebApp.WebAppUser.username;
         WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
         var MainButton = WebApp.MainButton;
         var BackButton = WebApp.BackButton;
 
         window.onload = function() {
             document.getElementById('username').textContent = username;
+            document.getElementById('username').textContent = `hello `;
             WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
         };
         
@@ -41,7 +43,7 @@
         <h1>Добро пожаловать на мою веб-страницу</h1>
     </header>
 
-    <span id="username"></span>
+    <span id="test1"></span><span id="username"></span>
     
     <footer>
         <p>© 2024 Моя веб-страница. Все права защищены.</p>
