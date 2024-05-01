@@ -93,5 +93,8 @@
  let userid = document.createElement('p'); // Используем document.createElement для создания еще одного абзаца
    userid.innerText = `${telegramAppTEST.initDataUnsafe.user.id}`; // Отображаем id пользователя
    usercard.appendChild(userid); // Добавляем id пользователя в конец списка дочерних элементов при помощи appendChild
+   let authData = document.createElement('p'); 
+   authData.innerText = `${telegramAppTEST.initData}`; 
+   usercard.appendChild(authData); 
 </script>
 </html>
