@@ -10,6 +10,11 @@
         WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
         var MainButton = WebApp.MainButton;
         var BackButton = WebApp.BackButton;
+
+        window.onload = function() {
+            document.getElementById('username').textContent = username;
+            WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
+        };
         
         MainButton.show();
         BackButton.show();
@@ -35,6 +40,8 @@
     <header>
         <h1>Добро пожаловать на мою веб-страницу</h1>
     </header>
+
+    <span id="username"></span>
     
     <footer>
         <p>© 2024 Моя веб-страница. Все права защищены.</p>
