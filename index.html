@@ -16,6 +16,10 @@
          font-size: 20px;
       }
 
+      .hide {
+         display: none;
+      }
+
       .hint{
          color: var(--tg-theme-hint-color);
       }
@@ -41,13 +45,23 @@
    </style>
 </head>
 <body>
-   <div id="usercard"> <!--Карточка профиля пользователя, который обращается к веб-приложению-->
+   <div id="mobile_block">
+      <p>Mobile</p>
+      <div id="usercard"> <!--Карточка профиля пользователя, который обращается к веб-приложению-->
+      </div>
+      <p>Здесь текст о компании TEST</p> <!--Используем для проверки-->
+      <a class="link" href="https://telegram/TEST.ru/">Ссылка на TEST</a> <!--Используем для проверки, что вебприложение Телеграмма работает-->
+      <p class="hint">Текст подсказки от TEST</p> <!--Проверка-->
+      <button id="button" class="button">Показать или скрыть основную кнопку </button>
+      <button id="btnEdit" class="button">Активировать кнопку / сделать неактивной</button> <!--Кнопка, чтобы сделать кнопку активной/неактивной-->
    </div>
-   <p>Здесь текст о компании TEST</p> <!--Используем для проверки-->
-   <a class="link" href="https://telegram/TEST.ru/">Ссылка на TEST</a> <!--Используем для проверки, что вебприложение Телеграмма работает-->
-   <p class="hint">Текст подсказки от TEST</p> <!--Проверка-->
-   <button id="button" class="button">Показать или скрыть основную кнопку </button> 
-   <button id="btnEdit" class="button">Активировать кнопку / сделать неактивной</button> <!--Кнопка, чтобы сделать кнопку активной/неактивной-->
+   <div id="desktop_block">
+      <p>Not mobile</p>
+      <div id="usercard_desk">
+         <p>Open from mobile</p>
+         <p>@alexnovi_bot</p>
+      </div>
+   </div>
 </body>
 <script>
   let telegramAppTEST = window.Telegram.WebApp; //нужно получить объект window.Telegram.WebApp Телеграмма
@@ -83,25 +97,29 @@
       telegramAppTEST.sendData("Проверяем событие onEvent. Если был клик по кнопке, то отправляем данные при помощи sendData в виде данной строки"); 
        });
    let usercard = document.getElementById("usercard"); //Используем getElementById, чтобы получить карточку пользователя 
+   let usercard_desk = document.getElementById("usercard_desk"); //Используем getElementById, чтобы получить карточку пользователя
 
   let profileName = document.createElement('p'); //При помощи document.createElement делаем абзац – <p> </p>
    profileName.innerText = `${telegramAppTEST.initDataUnsafe.user.first_name}
    ${telegramAppTEST.initDataUnsafe.user.last_name}
    ${telegramAppTEST.initDataUnsafe.user.username} (${telegramAppTEST.initDataUnsafe.user.language_code})`;
-  let platform = document.createElement('p'); //При помощи document.createElement делаем абзац – <p> </p>
+  let platform = document.createElement('p');
      platform.innerText = `${telegramAppTEST.platform} ${telegramAppTEST.version}`;
-   //В созданном параграфе будет Имя пользователя, его Фамилия, username, а также код языка
-   usercard.appendChild(profileName); //Используем appendChild, чтобы добавить узел в конец списка дочерних элементов
-   usercard.appendChild(platform); //Используем appendChild, чтобы добавить узел в конец списка дочерних элементов
+   usercard.appendChild(profileName);
+   usercard.appendChild(platform);
+   usercard_desk.appendChild(platform);
  let userid = document.createElement('p'); // Используем document.createElement для создания еще одного абзаца
    userid.innerText = `${telegramAppTEST.initDataUnsafe.user.id}`; // Отображаем id пользователя
    usercard.appendChild(userid); // Добавляем id пользователя в конец списка дочерних элементов при помощи appendChild
-  if (telegramAppTEST.platform !== 'android' && telegramAppTEST.platform !== 'ios') {
-     telegramAppTEST.showScanQrPopup({text: 'Scan to open Bot in your phone'})
-  }
+   if (telegramAppTEST.platform !== 'android' && telegramAppTEST.platform !== 'ios') {
+      document.getElementById("mobile_block").classList.add("hide");
+   } else {
+      document.getElementById("desktop_block").classList.add("hide");
+   }
+   telegramAppTEST.showScanQrPopup({text: 'Scan to open Bot in your phone'})
+   telegramAppTEST.showAlert('Must be QR')
    let authData = document.createElement('p'); 
    authData.innerText = `${telegramAppTEST.initData}`; 
    usercard.appendChild(authData);
-  telegramAppTEST.showAlert('Test alert')
 </script>
 </html>
