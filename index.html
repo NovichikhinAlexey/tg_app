@@ -88,14 +88,17 @@
    profileName.innerText = `${telegramAppTEST.initDataUnsafe.user.first_name}
    ${telegramAppTEST.initDataUnsafe.user.last_name}
    ${telegramAppTEST.initDataUnsafe.user.username} (${telegramAppTEST.initDataUnsafe.user.language_code})`;
+  let platform = document.createElement('p'); //При помощи document.createElement делаем абзац – <p> </p>
+     platform.innerText = `${telegramAppTEST.platform} ${telegramAppTEST.version}`;
    //В созданном параграфе будет Имя пользователя, его Фамилия, username, а также код языка
    usercard.appendChild(profileName); //Используем appendChild, чтобы добавить узел в конец списка дочерних элементов
+   usercard.appendChild(platform); //Используем appendChild, чтобы добавить узел в конец списка дочерних элементов
  let userid = document.createElement('p'); // Используем document.createElement для создания еще одного абзаца
    userid.innerText = `${telegramAppTEST.initDataUnsafe.user.id}`; // Отображаем id пользователя
    usercard.appendChild(userid); // Добавляем id пользователя в конец списка дочерних элементов при помощи appendChild
    let authData = document.createElement('p'); 
    authData.innerText = `${telegramAppTEST.initData}`; 
    usercard.appendChild(authData);
-
+  telegramAppTEST.showAlert('Test alert')
 </script>
 </html>
