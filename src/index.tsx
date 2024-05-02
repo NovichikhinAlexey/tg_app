@@ -17,6 +17,7 @@ import HapticFeedbackDemo from './HapticFeedbackDemo';
 import ScanQrPopupDemo from './ScanQrPopupDemo';
 import ExpandDemo from './ExpandDemo';
 import useBetaVersion from './useBetaVersion';
+import UserInfoDemo from "./UserInfoDemo";
 
 const DemoApp: FC<{
   onChangeTransition: DispatchWithoutAction;
@@ -80,6 +81,7 @@ const DemoApp: FC<{
               }}
             />
           )}
+          <UserInfoDemo />
           <BackButtonDemo />
           <ShowPopupDemo />
           <HapticFeedbackDemo />

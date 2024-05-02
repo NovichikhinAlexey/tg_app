@@ -18,6 +18,7 @@ const UserInfoDemo = () => {
           <Typography.Text>first_name: {`${initDataUnsafe?.user?.first_name}`}</Typography.Text>
           <Typography.Text>last_name: {`${initDataUnsafe?.user?.last_name}`}</Typography.Text>
           <Typography.Text>language_code: {`${initDataUnsafe?.user?.language_code}`}</Typography.Text>
+          <Typography.Text>id: {`${initDataUnsafe?.user?.id}`}</Typography.Text>
           <Typography.Text>version: {`${WebApp.version}`}</Typography.Text>
           <Typography.Text>platform: {`${WebApp.platform}`}</Typography.Text>
         </Form.Item>
