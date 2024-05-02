@@ -1,0 +1,48 @@
+body{
+    display: flex;
+    color: var(--tg-theme-text-color);
+    background: var(--tg-theme-bg-color);
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.hint{
+    color: var(--tg-theme-hint-color);
+}
+
+.link{
+    color: var(--tg-theme-link-color);
+}
+
+.button{
+    background: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+    border: none;
+    font-size: 20px;
+}
+
+.button:not(:last-child){
+    margin-bottom: 15px
+}
+
+.qr_image {
+    max-width: calc(100% - 40px);
+    margin: 20px 0;
+}
+
+#usercard{
+    text-align: center;
+}
+
+#desktop_block, #usercard_desk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
