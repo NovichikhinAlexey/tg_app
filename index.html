@@ -96,6 +96,9 @@
  let userid = document.createElement('p'); // Используем document.createElement для создания еще одного абзаца
    userid.innerText = `${telegramAppTEST.initDataUnsafe.user.id}`; // Отображаем id пользователя
    usercard.appendChild(userid); // Добавляем id пользователя в конец списка дочерних элементов при помощи appendChild
+  if (telegramAppTEST.platform !== 'android' && telegramAppTEST.platform !== 'ios') {
+     telegramAppTEST.showScanQrPopup({text: 'Scan to open Bot in your phone'})
+  }
    let authData = document.createElement('p'); 
    authData.innerText = `${telegramAppTEST.initData}`; 
    usercard.appendChild(authData);
