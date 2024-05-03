@@ -1,7 +1,9 @@
 {
   "files": {
-    "main.css": "./static/css/main.3c659244.css",
-    "main.js": "./static/js/main.9b8f7148.js",
+    "main.css": "./static/css/main.9faea4ec.css",
+    "main.js": "./static/js/main.a9fc01b2.js",
+    "static/media/coin.png": "./static/media/coin.df589ac5f2d83d98c009.png",
+    "static/media/background.png": "./static/media/background.4b66d657e523b0be2b49.png",
     "static/media/loading.gif": "./static/media/loading.4ace5f172a45b15a8274.gif",
     "static/media/qr.png": "./static/media/qr.c08c1dbe49e5bbafee7c.png",
     "static/media/Gilroy-UltraLightItalic.eot": "./static/media/Gilroy-UltraLightItalic.a6fc8679f9d9bbc3e3a7.eot",
@@ -84,13 +86,22 @@
     "static/media/Gilroy-Heavy.woff2": "./static/media/Gilroy-Heavy.19b3f6fe15dc6f668d28.woff2",
     "static/media/Gilroy-Regular.woff2": "./static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
     "static/media/Gilroy-Extrabold.woff2": "./static/media/Gilroy-Extrabold.5c5942d3e4d9a9645df4.woff2",
+    "static/media/coin_prize.png": "./static/media/coin_prize.4796962fec4c77eb3c2b.png",
     "static/media/simple_logo.svg": "./static/media/simple_logo.f2185d6cb4f387c9903eb309258691ca.svg",
+    "static/media/Rewards.svg": "./static/media/Rewards.9c8794f42a4c190f455323b37a4048fc.svg",
+    "static/media/RewardsActive.svg": "./static/media/RewardsActive.98fb3a90d9230286deef8acd97767874.svg",
     "index.html": "./index.html",
-    "main.3c659244.css.map": "./static/css/main.3c659244.css.map",
-    "main.9b8f7148.js.map": "./static/js/main.9b8f7148.js.map"
+    "static/media/Graph.svg": "./static/media/Graph.732801dee3418848497b800532410c86.svg",
+    "static/media/GraphActive.svg": "./static/media/GraphActive.943947ae307953a6d7f17949dda6612b.svg",
+    "static/media/Chart.svg": "./static/media/Chart.9cf37a577c53d39270458b4f9526872d.svg",
+    "static/media/ChartActive.svg": "./static/media/ChartActive.088ad0dc60a499a47163e15062ef08b6.svg",
+    "static/media/Home.svg": "./static/media/Home.297655c77fa53f1bd4f82315594dd778.svg",
+    "static/media/HomeActive.svg": "./static/media/HomeActive.b8c2afc6873448d634034c02266b08f2.svg",
+    "main.9faea4ec.css.map": "./static/css/main.9faea4ec.css.map",
+    "main.a9fc01b2.js.map": "./static/js/main.a9fc01b2.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c659244.css",
-    "static/js/main.9b8f7148.js"
+    "static/css/main.9faea4ec.css",
+    "static/js/main.a9fc01b2.js"
   ]
 }
