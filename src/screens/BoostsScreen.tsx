@@ -2,7 +2,7 @@
 const BoostsScreen = () => {
   return (
     <div>
-
+      boosts
     </div>
   );
 };

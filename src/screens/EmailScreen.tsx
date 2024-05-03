@@ -1,7 +1,11 @@
 import Logo from '../assets/simple_logo.svg';
 import {useState} from "react";
 
-const EmailScreen = () => {
+interface Props  {
+  onEmailEntered: () => void,
+}
+
+const EmailScreen = (props: Props) => {
   const [email, setEmail] = useState('');
   const [isValid, setValid] = useState(false);
 
@@ -11,13 +15,14 @@ const EmailScreen = () => {
       setEmail('');
       setValid(false);
     } else {
-      setEmail(value);
+      setEmail(value.replace(new RegExp(' ', 'g'), ''));
       setValid(emailRegex.test(value ?? ''));
     }
   };
 
   const handleContinue = () => {
     if (isValid) {
+      props.onEmailEntered();
       console.log('click');
     } else {
       console.log('not click(');

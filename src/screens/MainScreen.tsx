@@ -1,9 +1,9 @@
 import {useExpand, useInitData, useWebApp} from '@vkruglikov/react-telegram-web-app';
 import {useEffect, useState} from "react";
 import EmptyScreen from "./EmptyScreen";
-import HomeScreen from "./HomeScreen";
 import EmailScreen from "./EmailScreen";
 import LoaderScreen from "./LoaderScreen";
+import InnerScreen from "./InnerScreen";
 
 const MainScreen = () => {
   const [isLoading, setLoading] = useState(true);
@@ -11,6 +11,10 @@ const MainScreen = () => {
   const [isExpanded, expand] = useExpand();
   const [initDataUnsafe] = useInitData();
   const WebApp = useWebApp();
+
+  const handleEmailEntered = () => {
+    setUserExist(true);
+  };
 
   useEffect(() => {
     if (!isExpanded) {
@@ -29,7 +33,7 @@ const MainScreen = () => {
       {isLoading ? <LoaderScreen /> : <>
         {(WebApp.platform !== 'android' && WebApp.platform !== 'ios')
           ? (<EmptyScreen />)
-          : (userExist ? <HomeScreen /> : <EmailScreen />)
+          : (userExist ? <InnerScreen /> : <EmailScreen onEmailEntered={handleEmailEntered} />)
         }
       </>}
     </div>

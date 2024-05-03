@@ -2,7 +2,7 @@
 const InviteScreen = () => {
   return (
     <div>
-
+      invite
     </div>
   );
 };
