@@ -8,12 +8,14 @@ import InnerScreen from "./InnerScreen";
 const MainScreen = () => {
   const [isLoading, setLoading] = useState(true);
   const [userExist, setUserExist] = useState(false);
+  const [firstLoad, setFirstLoad] = useState(false);
   const [isExpanded, expand] = useExpand();
   const [initDataUnsafe] = useInitData();
   const WebApp = useWebApp();
 
   const handleEmailEntered = () => {
     setUserExist(true);
+    setFirstLoad(true);
   };
 
   useEffect(() => {
@@ -33,7 +35,7 @@ const MainScreen = () => {
       {isLoading ? <LoaderScreen /> : <>
         {(WebApp.platform !== 'android' && WebApp.platform !== 'ios')
           ? (<EmptyScreen />)
-          : (userExist ? <InnerScreen /> : <EmailScreen onEmailEntered={handleEmailEntered} />)
+          : (userExist ? <InnerScreen firstLoad={firstLoad} /> : <EmailScreen onEmailEntered={handleEmailEntered} />)
         }
       </>}
     </div>
