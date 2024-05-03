@@ -7,7 +7,9 @@ import {
 import { ConfigProvider, theme } from 'antd';
 import 'antd/dist/reset.css';
 
+import './assets/fonts/fonts.css';
 import './index.css';
+import './reset.css';
 
 import MainScreen from "./screens/MainScreen";
 
