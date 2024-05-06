@@ -27,7 +27,7 @@ const MainScreen = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 10000);
   }, []);
 
   return (
