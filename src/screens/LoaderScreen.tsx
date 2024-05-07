@@ -1,8 +1,9 @@
 import Loading from '../assets/loading.gif';
-import {useInitData} from "@vkruglikov/react-telegram-web-app";
+import {useInitData, useWebApp} from "@vkruglikov/react-telegram-web-app";
 
 const LoaderScreen = () => {
   const [initDataUnsafe] = useInitData();
+  const WebApp = useWebApp();
 
   return (
     <div className={'loader'}>
@@ -12,6 +13,9 @@ const LoaderScreen = () => {
       </div>
       <div className={'loader-text'}>
         {initDataUnsafe?.user?.id}
+      </div>
+      <div className={'loader-text'}>
+        {WebApp?.initData}
       </div>
     </div>
   );

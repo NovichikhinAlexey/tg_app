@@ -6,17 +6,21 @@ import {
 } from '@vkruglikov/react-telegram-web-app';
 import { ConfigProvider, theme } from 'antd';
 import 'antd/dist/reset.css';
+import {Provider} from "react-redux";
 
 import './assets/fonts/fonts.css';
 import './index.css';
 import './reset.css';
 
 import MainScreen from "./screens/MainScreen";
+import {store} from "./store/config";
 
 const DemoApp: FC<{
   onChangeTransition: DispatchWithoutAction;
 }> = ({ onChangeTransition }) => {
   const [colorScheme, themeParams] = useThemeParams();
+  // @ts-ignore
+  console.log(import.meta.env.VITE_API_HOST);
 
   return (
     <div>
@@ -37,7 +41,10 @@ const DemoApp: FC<{
             : undefined
         }
       >
-        <MainScreen />
+
+        <Provider store={store}>
+          <MainScreen />
+        </Provider>
       </ConfigProvider>
     </div>
   );

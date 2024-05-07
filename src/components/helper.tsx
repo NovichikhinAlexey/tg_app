@@ -16,7 +16,7 @@ const Helper = (props: Props) => {
       </div>}
       {props.step === 1 && <div className={'helper_item second'}>
           <img src={step2} alt={'>'} />
-          100 taps for <br /> 8 hours
+          you have
       </div>}
       {props.step === 2 && <div className={'helper_item third'}>
           <img src={step3} alt={'>'} />

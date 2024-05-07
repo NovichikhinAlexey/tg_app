@@ -1,5 +1,14 @@
+import {ProfileResponse} from "../types/types";
 
-const InviteScreen = () => {
+interface Props  {
+  userData: ProfileResponse | null,
+}
+
+const InviteScreen = (props: Props) => {
+  const handleInvite = () => {
+
+  };
+
   return (
     <div className={'invite_wrapper'}>
       <div className={'title'}>
@@ -44,6 +53,14 @@ const InviteScreen = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className={'button_block'}>
+        <div className={'home-data'}>
+          You have {props.userData?.data.inviteCount ?? 0} invites
+        </div>
+        <div className={'home-button'} onClick={handleInvite}>
+          Invite friend
         </div>
       </div>
     </div>

@@ -4,30 +4,9 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="assets/style.css" rel="stylesheet" />
-   <title>Telegram WebApps API</title>
-   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-   <div id="mobile_block">
-      <p>Mobile</p>
-      <div id="usercard"> <!--Карточка профиля пользователя, который обращается к веб-приложению-->
-      </div>
-      <p>Здесь текст о компании TEST</p> <!--Используем для проверки-->
-      <a class="link" href="https://telegram/TEST.ru/">Ссылка на TEST</a> <!--Используем для проверки, что вебприложение Телеграмма работает-->
-      <p class="hint">Текст подсказки от TEST</p> <!--Проверка-->
-      <button id="button" class="button">Показать или скрыть основную кнопку </button>
-      <button id="btnEdit" class="button">Активировать кнопку / сделать неактивной</button> <!--Кнопка, чтобы сделать кнопку активной/неактивной-->
-   </div>
-   <div id="desktop_block">
-      <p>Not mobile</p>
-      <div id="usercard_desk">
-         <p>Open from mobile</p>
-         <img class="qr_image" alt="qr" src="./assets/qr.png" />
-         <p>@alexnovi_bot</p>
-      </div>
-   </div>
-
+<div id="root"></div>
+<script type="module" src="./src/index.tsx"></script>
 </body>
-<script src="/assets/script.js"></script>
 </html>

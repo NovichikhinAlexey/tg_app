@@ -2,7 +2,7 @@ import Logo from '../assets/simple_logo.svg';
 import {useState} from "react";
 
 interface Props  {
-  onEmailEntered: () => void,
+  onEmailEntered: (email: string) => void,
 }
 
 const EmailScreen = (props: Props) => {
@@ -22,10 +22,7 @@ const EmailScreen = (props: Props) => {
 
   const handleContinue = () => {
     if (isValid) {
-      props.onEmailEntered();
-      console.log('click');
-    } else {
-      console.log('not click(');
+      props.onEmailEntered(email);
     }
   };
 

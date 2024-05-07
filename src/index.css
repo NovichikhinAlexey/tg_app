@@ -317,7 +317,6 @@ code {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    overflow: hidden;
 }
 
 .home_wrapper .button_block {
@@ -348,6 +347,11 @@ code {
     background: #9B7AFF;
 }
 
+.home_wrapper .button_block .home-button.block {
+    color: #434557;
+    background: #272833;
+}
+
 .home_wrapper .tap_block {
     position: relative;
     display: flex;
@@ -358,14 +362,13 @@ code {
 
 .home_wrapper .tap_block .home_background {
     position: absolute;
-    height: 150%;
-    top: -30%;
+    width: 100vw;
+    top: -40%;
     z-index: -1;
 }
 
 .home_wrapper .tap_block .home_coin {
     width: 204px;
-    height: 187px;
     margin-bottom: 40px;
 }
 .home_wrapper .tap_block .home_coin.shake {
@@ -383,15 +386,15 @@ code {
     margin-bottom: 8px;
 }
 
+.home_wrapper .tap_block .home_balance.small {
+    font-size: 24px;
+}
+
 .home_wrapper .tap_block .home_balance span {
     background: linear-gradient(180deg, #D0C0FF 0%, #9B79FF 50%, #5F42B5 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 48px;
 }
 
 .home_wrapper .tap_block .home_coins_text {
@@ -487,6 +490,13 @@ code {
 .tasks_wrapper .task_right.done {
     background: #2C2E37;
     color: #393E48;
+}
+
+.invite_wrapper {
+    min-height: calc(100vh - 128px);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .invite_wrapper .title {
@@ -585,6 +595,49 @@ code {
     width: 2px;
     height: 52px;
     margin: 2px 0;
+}
+
+.invite_wrapper .button_block {
+    margin-top: -25px;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px 24px;
+    background: linear-gradient(180deg, rgba(155, 122, 255, 0.00) 0%, rgba(155, 122, 255, 0.20) 100%);
+    justify-content: flex-end;
+}
+
+.invite_wrapper .button_block .home-button {
+    display: flex;
+    width: 100%;
+    padding: 16px 48px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #FFF;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    border-radius: 16px;
+    background: #9B7AFF;
+}
+
+.invite_wrapper .button_block .home-data {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.30);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 16px;
 }
 
 .helper {
