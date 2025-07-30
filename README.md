@@ -6,3 +6,7 @@
 
 [click me simple!](simple://confirm)
 
+
+
+<a href="simple://confirm"> simple rout </a>
+
