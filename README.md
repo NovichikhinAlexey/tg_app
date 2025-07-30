@@ -8,5 +8,4 @@
 
 
 
-<a href="simple://confirm"> simple rout </a>
 
