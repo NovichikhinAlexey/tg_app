@@ -4,7 +4,7 @@
 
 
 
-[click me simple!](simple://confirm)
+[click me appsflyer!](https://uat-simple.onelink.me/b0SP?af_xp=custom&pid=test&c=test&deep_link_value=action/MarketsScreen)
 
 
 
