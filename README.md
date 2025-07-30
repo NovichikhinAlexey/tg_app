@@ -1,3 +1,3 @@
 # hello app
 
-https://simple.app/
+[https://simple.app/](click me!)
